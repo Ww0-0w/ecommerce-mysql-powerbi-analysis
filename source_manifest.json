@@ -1,0 +1,38 @@
+[
+  {
+    "filename": "users.csv",
+    "rows": 5000,
+    "bytes": 409178,
+    "sha256": "3bd1fefe2bf47d22b958d8fcabb8ac7c9be186e921b7e309ea479b0ebad60dab"
+  },
+  {
+    "filename": "products.csv",
+    "rows": 2000,
+    "bytes": 147681,
+    "sha256": "d2f139f79bf76ed2cfd0576ce5e2ca3d1fead2507b0d32963b829371e90bc554"
+  },
+  {
+    "filename": "orders.csv",
+    "rows": 15000,
+    "bytes": 2210182,
+    "sha256": "dedc7aa7c254cb42a283440e422b2a284623abd1174a8b6d3a0fda66460817e2"
+  },
+  {
+    "filename": "user_behaviors.csv",
+    "rows": 30000,
+    "bytes": 1931518,
+    "sha256": "9d1389854254b649a71d6fa5fd0bc8eab027d1f5fc2530cf332561d42aab8d0c"
+  },
+  {
+    "filename": "user_features.csv",
+    "rows": 5000,
+    "bytes": 383872,
+    "sha256": "54ba43e72b944cd03d5479edf1cd773914c58d04d77951e365c912cc9f61e2e5"
+  },
+  {
+    "filename": "product_features.csv",
+    "rows": 2000,
+    "bytes": 96533,
+    "sha256": "e66817cbd94cf56236bab12d8489e5751f15265ea1904a0e37905b8869b37a31"
+  }
+]

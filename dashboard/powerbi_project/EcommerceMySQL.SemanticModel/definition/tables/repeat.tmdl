@@ -1,0 +1,26 @@
+table repeat
+	column window_days
+		dataType: int64
+		sourceColumn: window_days
+	column eligible_buyers
+		dataType: int64
+		sourceColumn: eligible_buyers
+	column repeat_buyers
+		dataType: int64
+		sourceColumn: repeat_buyers
+	column repeat_rate_pct
+		dataType: decimal
+		sourceColumn: repeat_rate_pct
+	partition repeat = m
+		mode: import
+		source =
+			let
+				Source = #table(type table [window_days = nullable number, eligible_buyers = nullable number, repeat_buyers = nullable number, repeat_rate_pct = nullable number], {
+					{7, 4567, 428, 9.3716},
+					{15, 4512, 870, 19.2819},
+					{30, 4400, 1536, 34.9091},
+					{60, 4093, 2345, 57.2929},
+					{90, 3634, 2622, 72.1519}
+				})
+			in
+				Source

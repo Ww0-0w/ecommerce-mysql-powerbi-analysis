@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "e61db727f2d8435981e1",
+  "position": {
+    "x": 30,
+    "y": 70,
+    "z": 0,
+    "height": 550,
+    "width": 590,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "experiment"
+                    }
+                  },
+                  "Property": "relative_lift_pct"
+                }
+              },
+              "queryRef": "experiment.relative_lift_pct",
+              "nativeQueryRef": "relative_lift_pct",
+              "displayName": "relative_lift_pct"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "experiment"
+                        }
+                      },
+                      "Property": "sample_per_arm"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(experiment.sample_per_arm)",
+              "nativeQueryRef": "sample_per_arm",
+              "displayName": "sample_per_arm"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "experiment"
+                  }
+                },
+                "Property": "relative_lift_pct"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'模拟 A/B 每组样本量'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

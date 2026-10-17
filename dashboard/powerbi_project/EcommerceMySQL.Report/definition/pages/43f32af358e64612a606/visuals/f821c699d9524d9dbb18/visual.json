@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "f821c699d9524d9dbb18",
+  "position": {
+    "x": 30,
+    "y": 70,
+    "z": 0,
+    "height": 550,
+    "width": 590,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "monthly"
+                    }
+                  },
+                  "Property": "month_key"
+                }
+              },
+              "queryRef": "monthly.month_key",
+              "nativeQueryRef": "month_key",
+              "displayName": "month_key"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "monthly"
+                        }
+                      },
+                      "Property": "orders"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(monthly.orders)",
+              "nativeQueryRef": "orders",
+              "displayName": "orders"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "monthly"
+                  }
+                },
+                "Property": "month_key"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'月成交订单'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

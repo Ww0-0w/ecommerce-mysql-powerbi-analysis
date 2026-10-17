@@ -1,0 +1,45 @@
+table monthly
+	column month_key
+		dataType: string
+		sourceColumn: month_key
+		summarizeBy: none
+	column calendar_days
+		dataType: int64
+		sourceColumn: calendar_days
+	column orders
+		dataType: int64
+		sourceColumn: orders
+	column buyers
+		dataType: int64
+		sourceColumn: buyers
+	column gmv
+		dataType: decimal
+		sourceColumn: gmv
+	column daily_gmv
+		dataType: decimal
+		sourceColumn: daily_gmv
+	column aov
+		dataType: decimal
+		sourceColumn: aov
+	column orders_per_buyer
+		dataType: decimal
+		sourceColumn: orders_per_buyer
+	column monthly_gmv_mom_pct
+		dataType: decimal
+		sourceColumn: monthly_gmv_mom_pct
+	column daily_gmv_mom_pct
+		dataType: decimal
+		sourceColumn: daily_gmv_mom_pct
+	partition monthly = m
+		mode: import
+		source =
+			let
+				Source = #table(type table [month_key = nullable text, calendar_days = nullable number, orders = nullable number, buyers = nullable number, gmv = nullable number, daily_gmv = nullable number, aov = nullable number, orders_per_buyer = nullable number, monthly_gmv_mom_pct = nullable number, daily_gmv_mom_pct = nullable number], {
+					{"2025-10", 31, 2174, 1802, 6768489.84, 218338.381935, 3113.380791, 1.2064, null, null},
+					{"2025-11", 30, 2133, 1740, 6593245.57, 219774.852333, 3091.066840, 1.2259, -2.589119, 0.6579101600},
+					{"2025-12", 31, 2111, 1728, 6495139.50, 209520.629032, 3076.806964, 1.2216, -1.487978, -4.6657855492},
+					{"2026-01", 31, 2223, 1787, 6880168.75, 221940.927419, 3094.992690, 1.2440, 5.927960, 5.9279596689},
+					{"2026-02", 28, 1980, 1655, 5946429.02, 212372.465000, 3003.246980, 1.1964, -13.571466, -4.3112654030}
+				})
+			in
+				Source

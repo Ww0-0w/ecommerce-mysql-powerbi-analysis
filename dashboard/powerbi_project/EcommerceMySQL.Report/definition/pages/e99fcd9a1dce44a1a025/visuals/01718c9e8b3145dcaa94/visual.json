@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "01718c9e8b3145dcaa94",
+  "position": {
+    "x": 340,
+    "y": 35,
+    "z": 1000,
+    "height": 135,
+    "width": 280,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "overview"
+                        }
+                      },
+                      "Property": "valid_orders"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(overview.valid_orders)",
+              "nativeQueryRef": "valid_orders",
+              "displayName": "成交订单"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'成交订单'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

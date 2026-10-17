@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "e38279184dd14f6194bf",
+  "position": {
+    "x": 650,
+    "y": 70,
+    "z": 1000,
+    "height": 550,
+    "width": 590,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "repeat"
+                    }
+                  },
+                  "Property": "window_days"
+                }
+              },
+              "queryRef": "repeat.window_days",
+              "nativeQueryRef": "window_days",
+              "displayName": "window_days"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "repeat"
+                        }
+                      },
+                      "Property": "repeat_rate_pct"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(repeat.repeat_rate_pct)",
+              "nativeQueryRef": "repeat_rate_pct",
+              "displayName": "repeat_rate_pct"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "repeat"
+                  }
+                },
+                "Property": "window_days"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'首单后复购率 %'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

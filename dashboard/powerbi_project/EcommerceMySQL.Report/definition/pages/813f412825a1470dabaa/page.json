@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "813f412825a1470dabaa",
+  "displayName": "模拟实验与质量核对",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

@@ -1,0 +1,31 @@
+table experiment
+	column relative_lift_pct
+		dataType: decimal
+		sourceColumn: relative_lift_pct
+	column baseline_pct
+		dataType: decimal
+		sourceColumn: baseline_pct
+	column target_pct
+		dataType: decimal
+		sourceColumn: target_pct
+	column absolute_lift_pp
+		dataType: decimal
+		sourceColumn: absolute_lift_pp
+	column sample_per_arm
+		dataType: int64
+		sourceColumn: sample_per_arm
+	column sample_total
+		dataType: int64
+		sourceColumn: sample_total
+	partition experiment = m
+		mode: import
+		source =
+			let
+				Source = #table(type table [relative_lift_pct = nullable number, baseline_pct = nullable number, target_pct = nullable number, absolute_lift_pp = nullable number, sample_per_arm = nullable number, sample_total = nullable number], {
+					{5.00, 34.9091, 36.654545, 1.745455, 11839, 23678},
+					{10.00, 34.9091, 38.400000, 3.490909, 2990, 5980},
+					{20.00, 34.9091, 41.890909, 6.981818, 761, 1522},
+					{30.00, 34.9091, 45.381818, 10.472727, 343, 686}
+				})
+			in
+				Source

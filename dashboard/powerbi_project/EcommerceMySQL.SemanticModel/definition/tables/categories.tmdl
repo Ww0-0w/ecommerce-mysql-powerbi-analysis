@@ -1,0 +1,37 @@
+table categories
+	column category
+		dataType: string
+		sourceColumn: category
+		summarizeBy: none
+	column orders
+		dataType: int64
+		sourceColumn: orders
+	column gmv
+		dataType: decimal
+		sourceColumn: gmv
+	column gmv_share_pct
+		dataType: decimal
+		sourceColumn: gmv_share_pct
+	partition categories = m
+		mode: import
+		source =
+			let
+				Source = #table(type table [category = nullable text, orders = nullable number, gmv = nullable number, gmv_share_pct = nullable number], {
+					{"手机数码", 765, 8008830.46, 20.521611},
+					{"家用电器", 844, 7905227.50, 20.256142},
+					{"汽车用品", 900, 7842772.34, 20.096108},
+					{"服装鞋包", 902, 2039641.80, 5.226323},
+					{"珠宝首饰", 786, 1995874.93, 5.114176},
+					{"美妆护肤", 877, 1866319.96, 4.782208},
+					{"食品生鲜", 1068, 1289382.66, 3.303879},
+					{"医药保健", 976, 1243325.49, 3.185864},
+					{"母婴用品", 896, 1155377.88, 2.960509},
+					{"箱包配饰", 849, 1129748.62, 2.894837},
+					{"家居家装", 874, 1011558.54, 2.591990},
+					{"礼品鲜花", 733, 949160.21, 2.432103},
+					{"运动户外", 785, 880344.38, 2.255771},
+					{"图书音像", 760, 879149.85, 2.252710},
+					{"宠物用品", 750, 829609.25, 2.125768}
+				})
+			in
+				Source

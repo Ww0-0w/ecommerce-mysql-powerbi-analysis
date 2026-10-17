@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "5a28c3c014454ac4a915",
+  "position": {
+    "x": 30,
+    "y": 70,
+    "z": 0,
+    "height": 550,
+    "width": 590,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "rfm"
+                    }
+                  },
+                  "Property": "segment"
+                }
+              },
+              "queryRef": "rfm.segment",
+              "nativeQueryRef": "segment",
+              "displayName": "segment"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "rfm"
+                        }
+                      },
+                      "Property": "buyers"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(rfm.buyers)",
+              "nativeQueryRef": "buyers",
+              "displayName": "buyers"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "rfm"
+                  }
+                },
+                "Property": "segment"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'RFM 分群人数'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,681 @@
+{
+  "aggregates": {
+    "overview": [
+      {
+        "valid_orders": "12765",
+        "buyers": "4605",
+        "gmv": "39026323.87",
+        "aov": "3057.291333",
+        "units_per_order": "2.9776",
+        "source_orders": "15000",
+        "excluded_orders": "2235"
+      }
+    ],
+    "monthly": [
+      {
+        "month_key": "2025-10",
+        "calendar_days": "31",
+        "orders": "2174",
+        "buyers": "1802",
+        "gmv": "6768489.84",
+        "daily_gmv": "218338.381935",
+        "aov": "3113.380791",
+        "orders_per_buyer": "1.2064",
+        "monthly_gmv_mom_pct": null,
+        "daily_gmv_mom_pct": null
+      },
+      {
+        "month_key": "2025-11",
+        "calendar_days": "30",
+        "orders": "2133",
+        "buyers": "1740",
+        "gmv": "6593245.57",
+        "daily_gmv": "219774.852333",
+        "aov": "3091.066840",
+        "orders_per_buyer": "1.2259",
+        "monthly_gmv_mom_pct": "-2.589119",
+        "daily_gmv_mom_pct": "0.6579101600"
+      },
+      {
+        "month_key": "2025-12",
+        "calendar_days": "31",
+        "orders": "2111",
+        "buyers": "1728",
+        "gmv": "6495139.50",
+        "daily_gmv": "209520.629032",
+        "aov": "3076.806964",
+        "orders_per_buyer": "1.2216",
+        "monthly_gmv_mom_pct": "-1.487978",
+        "daily_gmv_mom_pct": "-4.6657855492"
+      },
+      {
+        "month_key": "2026-01",
+        "calendar_days": "31",
+        "orders": "2223",
+        "buyers": "1787",
+        "gmv": "6880168.75",
+        "daily_gmv": "221940.927419",
+        "aov": "3094.992690",
+        "orders_per_buyer": "1.2440",
+        "monthly_gmv_mom_pct": "5.927960",
+        "daily_gmv_mom_pct": "5.9279596689"
+      },
+      {
+        "month_key": "2026-02",
+        "calendar_days": "28",
+        "orders": "1980",
+        "buyers": "1655",
+        "gmv": "5946429.02",
+        "daily_gmv": "212372.465000",
+        "aov": "3003.246980",
+        "orders_per_buyer": "1.1964",
+        "monthly_gmv_mom_pct": "-13.571466",
+        "daily_gmv_mom_pct": "-4.3112654030"
+      }
+    ],
+    "categories": [
+      {
+        "category": "手机数码",
+        "orders": "765",
+        "gmv": "8008830.46",
+        "gmv_share_pct": "20.521611"
+      },
+      {
+        "category": "家用电器",
+        "orders": "844",
+        "gmv": "7905227.50",
+        "gmv_share_pct": "20.256142"
+      },
+      {
+        "category": "汽车用品",
+        "orders": "900",
+        "gmv": "7842772.34",
+        "gmv_share_pct": "20.096108"
+      },
+      {
+        "category": "服装鞋包",
+        "orders": "902",
+        "gmv": "2039641.80",
+        "gmv_share_pct": "5.226323"
+      },
+      {
+        "category": "珠宝首饰",
+        "orders": "786",
+        "gmv": "1995874.93",
+        "gmv_share_pct": "5.114176"
+      },
+      {
+        "category": "美妆护肤",
+        "orders": "877",
+        "gmv": "1866319.96",
+        "gmv_share_pct": "4.782208"
+      },
+      {
+        "category": "食品生鲜",
+        "orders": "1068",
+        "gmv": "1289382.66",
+        "gmv_share_pct": "3.303879"
+      },
+      {
+        "category": "医药保健",
+        "orders": "976",
+        "gmv": "1243325.49",
+        "gmv_share_pct": "3.185864"
+      },
+      {
+        "category": "母婴用品",
+        "orders": "896",
+        "gmv": "1155377.88",
+        "gmv_share_pct": "2.960509"
+      },
+      {
+        "category": "箱包配饰",
+        "orders": "849",
+        "gmv": "1129748.62",
+        "gmv_share_pct": "2.894837"
+      },
+      {
+        "category": "家居家装",
+        "orders": "874",
+        "gmv": "1011558.54",
+        "gmv_share_pct": "2.591990"
+      },
+      {
+        "category": "礼品鲜花",
+        "orders": "733",
+        "gmv": "949160.21",
+        "gmv_share_pct": "2.432103"
+      },
+      {
+        "category": "运动户外",
+        "orders": "785",
+        "gmv": "880344.38",
+        "gmv_share_pct": "2.255771"
+      },
+      {
+        "category": "图书音像",
+        "orders": "760",
+        "gmv": "879149.85",
+        "gmv_share_pct": "2.252710"
+      },
+      {
+        "category": "宠物用品",
+        "orders": "750",
+        "gmv": "829609.25",
+        "gmv_share_pct": "2.125768"
+      }
+    ],
+    "rfm": [
+      {
+        "segment": "核心价值客户",
+        "buyers": "2022",
+        "gmv": "25776690.52",
+        "avg_spend": "12748.115984",
+        "avg_orders": "3.8511",
+        "buyer_share_pct": "43.9088",
+        "gmv_share_pct": "66.049497"
+      },
+      {
+        "segment": "流失风险客户",
+        "buyers": "509",
+        "gmv": "5814936.34",
+        "avg_spend": "11424.236424",
+        "avg_orders": "3.0314",
+        "buyer_share_pct": "11.0532",
+        "gmv_share_pct": "14.900036"
+      },
+      {
+        "segment": "成长潜力客户",
+        "buyers": "1048",
+        "gmv": "3748579.13",
+        "avg_spend": "3576.888483",
+        "avg_orders": "1.8645",
+        "buyer_share_pct": "22.7579",
+        "gmv_share_pct": "9.605258"
+      },
+      {
+        "segment": "一般客户",
+        "buyers": "1026",
+        "gmv": "3686117.88",
+        "avg_spend": "3592.707485",
+        "avg_orders": "1.4435",
+        "buyer_share_pct": "22.2801",
+        "gmv_share_pct": "9.445209"
+      }
+    ],
+    "repeat": [
+      {
+        "window_days": "7",
+        "eligible_buyers": "4567",
+        "repeat_buyers": "428",
+        "repeat_rate_pct": "9.3716"
+      },
+      {
+        "window_days": "15",
+        "eligible_buyers": "4512",
+        "repeat_buyers": "870",
+        "repeat_rate_pct": "19.2819"
+      },
+      {
+        "window_days": "30",
+        "eligible_buyers": "4400",
+        "repeat_buyers": "1536",
+        "repeat_rate_pct": "34.9091"
+      },
+      {
+        "window_days": "60",
+        "eligible_buyers": "4093",
+        "repeat_buyers": "2345",
+        "repeat_rate_pct": "57.2929"
+      },
+      {
+        "window_days": "90",
+        "eligible_buyers": "3634",
+        "repeat_buyers": "2622",
+        "repeat_rate_pct": "72.1519"
+      }
+    ],
+    "experiment": [
+      {
+        "relative_lift_pct": "5.00",
+        "baseline_pct": "34.9091",
+        "target_pct": "36.654545",
+        "absolute_lift_pp": "1.745455",
+        "sample_per_arm": "11839",
+        "sample_total": "23678"
+      },
+      {
+        "relative_lift_pct": "10.00",
+        "baseline_pct": "34.9091",
+        "target_pct": "38.400000",
+        "absolute_lift_pp": "3.490909",
+        "sample_per_arm": "2990",
+        "sample_total": "5980"
+      },
+      {
+        "relative_lift_pct": "20.00",
+        "baseline_pct": "34.9091",
+        "target_pct": "41.890909",
+        "absolute_lift_pp": "6.981818",
+        "sample_per_arm": "761",
+        "sample_total": "1522"
+      },
+      {
+        "relative_lift_pct": "30.00",
+        "baseline_pct": "34.9091",
+        "target_pct": "45.381818",
+        "absolute_lift_pp": "10.472727",
+        "sample_per_arm": "343",
+        "sample_total": "686"
+      }
+    ],
+    "quality": [
+      {
+        "check_name": "amount_identity_failures",
+        "observed": "0",
+        "expected": "0"
+      },
+      {
+        "check_name": "behavior_orphan_products",
+        "observed": "0",
+        "expected": "0"
+      },
+      {
+        "check_name": "behavior_orphan_users",
+        "observed": "0",
+        "expected": "0"
+      },
+      {
+        "check_name": "behaviors_rows",
+        "observed": "30000",
+        "expected": "30000"
+      },
+      {
+        "check_name": "excluded_orders",
+        "observed": "2235",
+        "expected": "2235"
+      },
+      {
+        "check_name": "invalid_money_or_quantity",
+        "observed": "0",
+        "expected": "0"
+      },
+      {
+        "check_name": "order_orphan_products",
+        "observed": "0",
+        "expected": "0"
+      },
+      {
+        "check_name": "order_orphan_users",
+        "observed": "0",
+        "expected": "0"
+      },
+      {
+        "check_name": "orders_rows",
+        "observed": "15000",
+        "expected": "15000"
+      },
+      {
+        "check_name": "product_features_rows",
+        "observed": "2000",
+        "expected": "2000"
+      },
+      {
+        "check_name": "products_rows",
+        "observed": "2000",
+        "expected": "2000"
+      },
+      {
+        "check_name": "review_score_missing",
+        "observed": "10777",
+        "expected": "10777"
+      },
+      {
+        "check_name": "stale_last_order_feature",
+        "observed": "5000",
+        "expected": "5000"
+      },
+      {
+        "check_name": "user_features_rows",
+        "observed": "5000",
+        "expected": "5000"
+      },
+      {
+        "check_name": "users_rows",
+        "observed": "5000",
+        "expected": "5000"
+      },
+      {
+        "check_name": "valid_orders",
+        "observed": "12765",
+        "expected": "12765"
+      }
+    ]
+  },
+  "extras": {
+    "median_order_payment": [
+      [
+        "1460.890000"
+      ]
+    ],
+    "one_time_buyers": [
+      [
+        "1006"
+      ]
+    ],
+    "repeat_buyer_gmv_pct": [
+      [
+        "91.815332"
+      ]
+    ],
+    "quantity_price_matches": [
+      [
+        "4"
+      ]
+    ],
+    "asof_ts": [
+      [
+        "2026-03-05 22:38:35.868992"
+      ]
+    ],
+    "rfm_score_bounds": [
+      [
+        "1",
+        "67.0000",
+        "180.0000",
+        "1",
+        "1",
+        "2",
+        "1",
+        "18.37",
+        "3098.78"
+      ],
+      [
+        "1",
+        "68.0000",
+        "178.0000",
+        "1",
+        "1",
+        "2",
+        "2",
+        "3100.02",
+        "8337.32"
+      ],
+      [
+        "1",
+        "67.0000",
+        "179.0000",
+        "1",
+        "1",
+        "2",
+        "3",
+        "8678.24",
+        "40759.76"
+      ],
+      [
+        "1",
+        "67.0000",
+        "173.0000",
+        "2",
+        "2",
+        "3",
+        "1",
+        "183.65",
+        "3087.81"
+      ],
+      [
+        "1",
+        "67.0000",
+        "176.0000",
+        "2",
+        "2",
+        "3",
+        "2",
+        "3107.24",
+        "8330.66"
+      ],
+      [
+        "1",
+        "68.0000",
+        "163.0000",
+        "2",
+        "2",
+        "3",
+        "3",
+        "8365.89",
+        "41104.18"
+      ],
+      [
+        "1",
+        "69.0000",
+        "143.0000",
+        "3",
+        "3",
+        "5",
+        "1",
+        "1425.82",
+        "3091.42"
+      ],
+      [
+        "1",
+        "68.0000",
+        "156.0000",
+        "3",
+        "3",
+        "6",
+        "2",
+        "3118.18",
+        "8125.17"
+      ],
+      [
+        "1",
+        "68.0000",
+        "152.0000",
+        "3",
+        "3",
+        "7",
+        "3",
+        "8434.37",
+        "78301.93"
+      ],
+      [
+        "2",
+        "26.0000",
+        "67.0000",
+        "1",
+        "1",
+        "2",
+        "1",
+        "35.29",
+        "3093.40"
+      ],
+      [
+        "2",
+        "26.0000",
+        "67.0000",
+        "1",
+        "1",
+        "2",
+        "2",
+        "3132.70",
+        "8282.92"
+      ],
+      [
+        "2",
+        "27.0000",
+        "67.0000",
+        "1",
+        "1",
+        "2",
+        "3",
+        "8515.98",
+        "33236.48"
+      ],
+      [
+        "2",
+        "26.0000",
+        "67.0000",
+        "2",
+        "2",
+        "3",
+        "1",
+        "445.05",
+        "3091.97"
+      ],
+      [
+        "2",
+        "26.0000",
+        "67.0000",
+        "2",
+        "2",
+        "3",
+        "2",
+        "3105.42",
+        "8340.19"
+      ],
+      [
+        "2",
+        "26.0000",
+        "67.0000",
+        "2",
+        "2",
+        "3",
+        "3",
+        "8364.19",
+        "39443.35"
+      ],
+      [
+        "2",
+        "26.0000",
+        "65.0000",
+        "3",
+        "3",
+        "4",
+        "1",
+        "755.74",
+        "3055.11"
+      ],
+      [
+        "2",
+        "26.0000",
+        "67.0000",
+        "3",
+        "3",
+        "6",
+        "2",
+        "3100.00",
+        "8330.97"
+      ],
+      [
+        "2",
+        "26.0000",
+        "67.0000",
+        "3",
+        "3",
+        "8",
+        "3",
+        "8380.67",
+        "55590.07"
+      ],
+      [
+        "3",
+        "0.0000",
+        "25.0000",
+        "1",
+        "1",
+        "2",
+        "1",
+        "15.96",
+        "3083.15"
+      ],
+      [
+        "3",
+        "0.0000",
+        "25.0000",
+        "1",
+        "1",
+        "2",
+        "2",
+        "3099.91",
+        "8059.10"
+      ],
+      [
+        "3",
+        "1.0000",
+        "24.0000",
+        "1",
+        "1",
+        "2",
+        "3",
+        "8462.20",
+        "36784.60"
+      ],
+      [
+        "3",
+        "0.0000",
+        "25.0000",
+        "2",
+        "2",
+        "3",
+        "1",
+        "295.41",
+        "3071.76"
+      ],
+      [
+        "3",
+        "0.0000",
+        "25.0000",
+        "2",
+        "2",
+        "3",
+        "2",
+        "3100.35",
+        "8316.78"
+      ],
+      [
+        "3",
+        "0.0000",
+        "25.0000",
+        "2",
+        "2",
+        "3",
+        "3",
+        "8358.18",
+        "49362.99"
+      ],
+      [
+        "3",
+        "0.0000",
+        "25.0000",
+        "3",
+        "3",
+        "5",
+        "1",
+        "421.50",
+        "3096.47"
+      ],
+      [
+        "3",
+        "0.0000",
+        "25.0000",
+        "3",
+        "3",
+        "8",
+        "2",
+        "3117.53",
+        "8318.63"
+      ],
+      [
+        "3",
+        "0.0000",
+        "25.0000",
+        "3",
+        "3",
+        "11",
+        "3",
+        "8359.51",
+        "63384.51"
+      ]
+    ]
+  }
+}

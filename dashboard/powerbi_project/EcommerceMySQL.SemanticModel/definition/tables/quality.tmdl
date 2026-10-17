@@ -1,0 +1,35 @@
+table quality
+	column check_name
+		dataType: string
+		sourceColumn: check_name
+		summarizeBy: none
+	column observed
+		dataType: int64
+		sourceColumn: observed
+	column expected
+		dataType: int64
+		sourceColumn: expected
+	partition quality = m
+		mode: import
+		source =
+			let
+				Source = #table(type table [check_name = nullable text, observed = nullable number, expected = nullable number], {
+					{"amount_identity_failures", 0, 0},
+					{"behavior_orphan_products", 0, 0},
+					{"behavior_orphan_users", 0, 0},
+					{"behaviors_rows", 30000, 30000},
+					{"excluded_orders", 2235, 2235},
+					{"invalid_money_or_quantity", 0, 0},
+					{"order_orphan_products", 0, 0},
+					{"order_orphan_users", 0, 0},
+					{"orders_rows", 15000, 15000},
+					{"product_features_rows", 2000, 2000},
+					{"products_rows", 2000, 2000},
+					{"review_score_missing", 10777, 10777},
+					{"stale_last_order_feature", 5000, 5000},
+					{"user_features_rows", 5000, 5000},
+					{"users_rows", 5000, 5000},
+					{"valid_orders", 12765, 12765}
+				})
+			in
+				Source

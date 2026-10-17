@@ -1,0 +1,35 @@
+table rfm
+	column segment
+		dataType: string
+		sourceColumn: segment
+		summarizeBy: none
+	column buyers
+		dataType: int64
+		sourceColumn: buyers
+	column gmv
+		dataType: decimal
+		sourceColumn: gmv
+	column avg_spend
+		dataType: decimal
+		sourceColumn: avg_spend
+	column avg_orders
+		dataType: decimal
+		sourceColumn: avg_orders
+	column buyer_share_pct
+		dataType: decimal
+		sourceColumn: buyer_share_pct
+	column gmv_share_pct
+		dataType: decimal
+		sourceColumn: gmv_share_pct
+	partition rfm = m
+		mode: import
+		source =
+			let
+				Source = #table(type table [segment = nullable text, buyers = nullable number, gmv = nullable number, avg_spend = nullable number, avg_orders = nullable number, buyer_share_pct = nullable number, gmv_share_pct = nullable number], {
+					{"核心价值客户", 2022, 25776690.52, 12748.115984, 3.8511, 43.9088, 66.049497},
+					{"流失风险客户", 509, 5814936.34, 11424.236424, 3.0314, 11.0532, 14.900036},
+					{"成长潜力客户", 1048, 3748579.13, 3576.888483, 1.8645, 22.7579, 9.605258},
+					{"一般客户", 1026, 3686117.88, 3592.707485, 1.4435, 22.2801, 9.445209}
+				})
+			in
+				Source

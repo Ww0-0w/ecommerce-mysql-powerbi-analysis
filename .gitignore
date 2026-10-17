@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+*.env
+*.log
+users.csv
+products.csv
+orders.csv
+user_behaviors.csv
+user_features.csv
+product_features.csv
+work/
+interview/

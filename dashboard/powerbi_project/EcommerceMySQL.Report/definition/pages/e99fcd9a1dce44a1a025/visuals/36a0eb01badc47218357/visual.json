@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "36a0eb01badc47218357",
+  "position": {
+    "x": 960,
+    "y": 35,
+    "z": 3000,
+    "height": 135,
+    "width": 280,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "overview"
+                        }
+                      },
+                      "Property": "aov"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(overview.aov)",
+              "nativeQueryRef": "aov",
+              "displayName": "客单价"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'客单价'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

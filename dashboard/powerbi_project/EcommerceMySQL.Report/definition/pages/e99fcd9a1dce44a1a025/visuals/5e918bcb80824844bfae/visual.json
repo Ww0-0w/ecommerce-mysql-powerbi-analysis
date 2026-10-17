@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "5e918bcb80824844bfae",
+  "position": {
+    "x": 30,
+    "y": 35,
+    "z": 0,
+    "height": 135,
+    "width": 280,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "overview"
+                        }
+                      },
+                      "Property": "gmv"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(overview.gmv)",
+              "nativeQueryRef": "gmv",
+              "displayName": "实付 GMV"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'实付 GMV'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

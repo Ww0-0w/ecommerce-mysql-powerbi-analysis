@@ -1,0 +1,12 @@
+model Model
+	culture: zh-CN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: zh-CN
+
+ref table overview
+ref table monthly
+ref table categories
+ref table rfm
+ref table repeat
+ref table experiment
+ref table quality

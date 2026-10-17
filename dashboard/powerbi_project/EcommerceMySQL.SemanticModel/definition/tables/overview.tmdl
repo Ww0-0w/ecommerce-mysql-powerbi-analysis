@@ -1,0 +1,31 @@
+table overview
+	column valid_orders
+		dataType: int64
+		sourceColumn: valid_orders
+	column buyers
+		dataType: int64
+		sourceColumn: buyers
+	column gmv
+		dataType: decimal
+		sourceColumn: gmv
+	column aov
+		dataType: decimal
+		sourceColumn: aov
+	column units_per_order
+		dataType: decimal
+		sourceColumn: units_per_order
+	column source_orders
+		dataType: int64
+		sourceColumn: source_orders
+	column excluded_orders
+		dataType: int64
+		sourceColumn: excluded_orders
+	partition overview = m
+		mode: import
+		source =
+			let
+				Source = #table(type table [valid_orders = nullable number, buyers = nullable number, gmv = nullable number, aov = nullable number, units_per_order = nullable number, source_orders = nullable number, excluded_orders = nullable number], {
+					{12765, 4605, 39026323.87, 3057.291333, 2.9776, 15000, 2235}
+				})
+			in
+				Source

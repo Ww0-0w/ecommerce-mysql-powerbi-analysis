@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "f0d252f465ea4716b7b9",
+  "position": {
+    "x": 650,
+    "y": 210,
+    "z": 5000,
+    "height": 440,
+    "width": 590,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "monthly"
+                    }
+                  },
+                  "Property": "month_key"
+                }
+              },
+              "queryRef": "monthly.month_key",
+              "nativeQueryRef": "month_key",
+              "displayName": "month_key"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "monthly"
+                        }
+                      },
+                      "Property": "daily_gmv"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(monthly.daily_gmv)",
+              "nativeQueryRef": "daily_gmv",
+              "displayName": "daily_gmv"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "monthly"
+                  }
+                },
+                "Property": "month_key"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'日均 GMV'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

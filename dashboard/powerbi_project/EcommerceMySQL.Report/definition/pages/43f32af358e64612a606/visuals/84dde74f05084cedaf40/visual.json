@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "84dde74f05084cedaf40",
+  "position": {
+    "x": 650,
+    "y": 70,
+    "z": 1000,
+    "height": 550,
+    "width": 590,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "categories"
+                    }
+                  },
+                  "Property": "category"
+                }
+              },
+              "queryRef": "categories.category",
+              "nativeQueryRef": "category",
+              "displayName": "category"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "categories"
+                        }
+                      },
+                      "Property": "gmv"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(categories.gmv)",
+              "nativeQueryRef": "gmv",
+              "displayName": "gmv"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "categories"
+                      }
+                    },
+                    "Property": "gmv"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'品类 GMV'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

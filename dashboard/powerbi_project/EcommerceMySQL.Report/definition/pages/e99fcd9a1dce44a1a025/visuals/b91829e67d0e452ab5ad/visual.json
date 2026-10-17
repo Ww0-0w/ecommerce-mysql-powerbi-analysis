@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "b91829e67d0e452ab5ad",
+  "position": {
+    "x": 30,
+    "y": 210,
+    "z": 4000,
+    "height": 440,
+    "width": 590,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "monthly"
+                    }
+                  },
+                  "Property": "month_key"
+                }
+              },
+              "queryRef": "monthly.month_key",
+              "nativeQueryRef": "month_key",
+              "displayName": "month_key"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "monthly"
+                        }
+                      },
+                      "Property": "gmv"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(monthly.gmv)",
+              "nativeQueryRef": "gmv",
+              "displayName": "gmv"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "monthly"
+                  }
+                },
+                "Property": "month_key"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'整月 GMV'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
